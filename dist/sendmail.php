@@ -34,16 +34,15 @@ $user_Message = urldecode($user_Message);
 $user_Message = trim($user_Message);
 $user_Message = filter_var($_POST["user_message"], FILTER_SANITIZE_STRING);
 
-
-
 $to_Email = "jergal1990@gmail.com"; 
-$subject = 'Feedback form'; 
-$email = "Name: ".$user_Email;
-$name = "Name: ".$user_Name;
-$phone = "Phone: ".$user_Phone;
-$message = "Message: ".$user_Message;
+$subject = 'Feedback form';
 
- if(!mail($to_Email, $subject, $email, $name, $phone ,$message, "From: example@gmail.com \r\n"))
+$msg = "Email: $user_Email\n".
+       "Name: $user_Name\n".
+       "Phone: $user_Phone\n".
+       "Message: $user_Message";
+       
+ if(!mail($to_Email, $subject, $msg, "From: example@phottomap.com \r\n"))
  {
 $answer_serv = json_encode(array('text' => 'Не могу отправить почту! Пожалуйста, проверьте ваши настройки PHP почты.'));
  die($answer_serv);
