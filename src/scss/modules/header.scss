@@ -1,0 +1,94 @@
+header {
+    align-items: center;
+    justify-content: flex-start !important;
+    height: 480px;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 695px;
+
+    @media screen and (max-width: $phoneWidth) {
+        padding: 0 35px 0 35px;
+    }
+
+    @media screen and (max-width: $smphoneWidth) {
+        max-width: 320px;
+    }
+
+    h1 {
+        margin-top: 165px;
+        font-size: 48px;
+        line-height: 54px;
+        letter-spacing: -0.02em;
+
+        @media screen and (max-width: $phoneWidth) {
+            margin-top: 105px;
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: $smphoneWidth) {
+            margin-top: 80px;
+            font-size: 30px;
+        }
+    }
+
+    p {
+        font-family: $secondFont;
+        margin-top: 24px;
+        font-size: $mainFontSize;
+        line-height: 26px;
+
+        @media screen and (max-width: $phoneWidth) {
+            font-size: 16px;
+        }
+
+        span {
+            font-weight: bold;
+            color: $secondFontColor;
+        }
+    }
+}
+
+.profile-btn {
+    position: relative;
+    z-index: 1;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 236px;
+    height: 54px;
+    font-family: $thirdFont;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    span {
+        margin-right: 10px;
+        color: $secondFontColor;
+        font-family: $secondFont;
+        font-size: 28px;
+    }
+
+    .span-hover {
+        transition: 300ms;
+        position: absolute;
+        z-index: -1;
+        left: 5px;
+        display: flex;
+        width: 54px;
+        height: 54px;
+        background-color: $btnColor;
+        border-radius: 54px;
+    }
+
+    &:hover {
+        .span-hover {
+            width: 236px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+@import 'modules/header.scss';
+@import 'modules/philosophy.scss';
+@import 'modules/about.scss';
+@import 'modules/advantages.scss';
+@import 'modules/form.scss';
+@import 'modules/modal.scss';
+
+
+html {
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    background-color: $htmlBgColor;
+    line-height: $mainLineHeight;
+    height: 100%;
+    @media screen and (max-width: $desktopWidth) {
+        
+    }
+
+    @media screen and (max-width: $smdesktopWidth) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        
+    }
+
+}
+
+section, header {
+    background-color: $bodyBgColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 1440px;
+}

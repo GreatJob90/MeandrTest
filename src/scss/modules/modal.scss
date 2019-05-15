@@ -1,0 +1,46 @@
+.modal-window {
+    position: absolute;
+    margin-top: 500px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    max-width: 800px;
+    height: 250px;
+    background-color: $bodyBgColor;
+    border: 2px solid $spanBorderColor;
+    border-radius: 25px;
+    
+    p {
+        font-size: 28px;
+        border-bottom: 2px solid $secondFontColor;
+    }
+}
+
+.fade {
+    display: flex;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 300ms;
+    animation-name: fade;
+    animation-duration: 300ms;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

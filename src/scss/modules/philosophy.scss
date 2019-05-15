@@ -1,0 +1,117 @@
+.philosophy {
+    position: relative;
+
+    @media screen and (max-width: $lgtableWidth) {
+        padding-bottom: 80px;
+        background-color: $divBgColor;
+    }
+}
+
+.philosophy-image {
+    height: 600px;
+    background-image: url(/assets/img/bg-image.png);
+    background-position: right;
+}
+
+.philosophy-center {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    top: 501px;
+    max-width: 972px;
+    align-self: center;
+    background-color: $bodyBgColor;
+
+    @media screen and (max-width: $lgtableWidth) {
+        margin-top: 80px;
+        flex-direction: column;
+        position: unset;
+        top: unset;
+        background-color: $bodyBgColor;
+    }
+
+    @media screen and (max-width: $smphoneWidth) {
+        margin-top: 10px !important;
+    }
+
+    > div {
+        display: flex;
+        flex-basis: 486px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    > div > div {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .philosophy-cell {
+        padding: 60px 70px 60px 50px;
+        width: 486px;
+        height: 232px;
+        max-height: 232px;
+        border: 1px solid $btnColor;
+
+        h3 {
+            font-size: 12px;
+            line-height: 19px;
+            font-weight: bolder;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $secondFontColor;
+        }
+
+        p {
+            margin-top: 12px;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: -0.03em;
+        }
+
+        @media screen and (max-width: $lgtableWidth) {
+            padding: 50px 50px 30px 50px;
+            width: 100%;
+            max-height: 180px;
+            height: 180px;
+
+            h3{
+                font-size: 20px;
+            }
+
+            p{
+               margin-top: 18px;
+               font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: $smphoneWidth) {
+            padding: 20px 30px 10px 30px !important;
+            max-height: 200px !important;
+            height: 200px;
+
+            h3 {
+                font-size: 20px;
+                line-height: $mainLineHeight;
+            }
+
+            p {
+                margin-top: 18px;
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+
+.philosophy-bottom {
+    height: 445px;
+    background-color: $divBgColor;
+    background-position: right;
+
+    @media screen and (max-width: $lgtableWidth) {
+        display: none;
+    }
+}
+
