@@ -53,6 +53,9 @@ module.exports = {
                    loader: 'css-loader',
                    options: { sourceMap: true }
                }, {
+                   loader: 'resolve-url-loader',
+                   options: { }
+               }, {
                    loader: 'postcss-loader',
                    options: {
                        sourceMap: true,
