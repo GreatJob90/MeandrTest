@@ -9,6 +9,14 @@ window.addEventListener('DOMContentLoaded', () => {
         sendBtn = document.getElementById('send-btn'),
         modalWindow = document.getElementById('modal-window');
 
+    let elements = [inputName, inputEmail, inputPhone, message],
+        placeholders = [
+            'Сидоров Александр',
+            'Sidorov@yandex.ru',
+            '+7(999)-328-14-20',
+            'Свой проект по созданию универсальной инфраструктуры строительства'
+        ];
+
     sendBtn.onclick = () => {
         checkForm();
     };
@@ -22,13 +30,13 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     inputName.onblur = () => {
-        clearStyle(inputName);
+        clearStyle(inputName, placeholders[0]);
     };
     inputEmail.onblur = () => {
-        clearStyle(inputEmail);
+        clearStyle(inputEmail, placeholders[1]);
     };
     inputPhone.onblur = () => {
-        clearStyle(inputPhone);
+        clearStyle(inputPhone, placeholders[2]);
     };
 
     function checkForm() {
@@ -60,20 +68,13 @@ window.addEventListener('DOMContentLoaded', () => {
             inputAlert(inputEmail, "*Введите корректный e-mail");
             return false;
 
-        } else if (inputPhone.length > 1 && !validPhone ) {
+        } else if (phoneValue.length > 1 && !validPhone) {
             inputAlert(inputPhone, "*Введите корректный телефон");
             return false;
-
+                
+            
         } else {
             sendForm();
-
-            let elements = [ inputName, inputEmail, inputPhone, message ],
-                placeholders = [
-                    'Сидоров Александр',
-                    'Sidorov@yandex.ru',
-                    '+7(999) - 328 - 14 - 20',
-                    'Свой проект по созданию универсальной инфраструктуры строительства'
-                ];
 
            for (let i = 0; i < elements.length; i++) {
                elements[i].value = '';
