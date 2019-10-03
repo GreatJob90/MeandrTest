@@ -8,6 +8,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 90%;
     max-width: 695px;
 
     @media screen and (max-width: $tableWidth) {
@@ -77,6 +78,7 @@ header {
     .span-hover {
         transition: 300ms;
         position: absolute;
+        top: 0;
         z-index: -1;
         left: 5px;
         display: flex;
